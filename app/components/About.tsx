@@ -1,18 +1,75 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <section id="about" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left — card */}
+          {/* Left — content */}
+          <div>
+            <span className="inline-flex items-center gap-2 text-violet-600 font-medium text-sm mb-3">
+              <span className="w-6 h-0.5 bg-violet-600 inline-block" />
+              About Me
+            </span>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
+              I am an experienced{" "}
+              <span className="text-violet-600">Engineering Leader</span> and Developer
+            </h2>
+            <p className="text-gray-600 mb-5 leading-relaxed">
+              With over 15 years of experience in software engineering, I specialize in building scalable,
+              high‑performance systems and leading cross‑functional engineering teams. My expertise spans
+              the full software development lifecycle — from architecture design to production deployment.
+            </p>
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              I&apos;m passionate about clean code, system design, and mentoring developers to grow.
+              I bring strong communication skills to bridge the gap between business goals and technical execution,
+              ensuring teams deliver value iteratively and reliably.
+            </p>
+
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              {[
+                { label: "Location", value: "New Delhi, India" },
+                { label: "Email", value: "techlead.ps@gmail.com" },
+                { label: "Focus", value: "Backend & Cloud" },
+                { label: "Availability", value: "Open to Opportunities" },
+              ].map((item) => (
+                <div key={item.label} className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-violet-500 mt-2 flex-shrink-0" />
+                  <div>
+                    <span className="text-xs text-gray-400 block">{item.label}</span>
+                    <span className="text-sm font-medium text-gray-700">{item.value}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white font-medium px-7 py-3 rounded-full transition-colors shadow-lg shadow-violet-200"
+            >
+              Get in Touch
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+
+          {/* Right — card */}
           <div className="relative">
             <div className="bg-gradient-to-br from-violet-50 to-indigo-50 rounded-3xl p-8 border border-violet-100">
-              <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-violet-500 to-indigo-600 mx-auto mb-6 flex items-center justify-center text-white text-4xl font-bold shadow-xl">
-                PS
+              <div className="w-32 h-32 rounded-2xl mx-auto mb-6 relative overflow-hidden shadow-xl ring-4 ring-violet-100">
+                <Image
+                  src="/profile.jpg"
+                  alt="Prashant Sahni"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
               </div>
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold text-gray-900">Prashant Sahni</h3>
                 <p className="text-violet-600 font-medium mt-1">Engineering Leader &amp; Developer</p>
-                <p className="text-gray-500 text-sm mt-1">Noida, India</p>
+                <p className="text-gray-500 text-sm mt-1">New Delhi, India</p>
               </div>
 
               {/* Social links */}
@@ -45,15 +102,6 @@ export default function About() {
                       </svg>
                     ),
                   },
-                  {
-                    href: "https://www.youtube.com/@TechLead99",
-                    label: "YouTube",
-                    icon: (
-                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M23.5 6.19a3.02 3.02 0 0 0-2.13-2.14C19.46 3.5 12 3.5 12 3.5s-7.46 0-9.37.55A3.02 3.02 0 0 0 .5 6.19C0 8.1 0 12 0 12s0 3.9.5 5.81a3.02 3.02 0 0 0 2.13 2.14c1.91.55 9.37.55 9.37.55s7.46 0 9.37-.55a3.02 3.02 0 0 0 2.13-2.14C24 15.9 24 12 24 12s0-3.9-.5-5.81zM9.75 15.5v-7l6.25 3.5-6.25 3.5z" />
-                      </svg>
-                    ),
-                  },
                 ].map((s) => (
                   <a
                     key={s.label}
@@ -68,55 +116,6 @@ export default function About() {
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Right — content */}
-          <div>
-            <span className="inline-flex items-center gap-2 text-violet-600 font-medium text-sm mb-3">
-              <span className="w-6 h-0.5 bg-violet-600 inline-block" />
-              About Me
-            </span>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
-              I am an experienced{" "}
-              <span className="text-violet-600">Engineering Leader</span> and Developer
-            </h2>
-            <p className="text-gray-600 mb-5 leading-relaxed">
-              With over 10 years of experience in software engineering, I specialize in building scalable,
-              high‑performance systems and leading cross‑functional engineering teams. My expertise spans
-              the full software development lifecycle — from architecture design to production deployment.
-            </p>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              I&apos;m passionate about clean code, system design, and mentoring developers to grow.
-              I bring strong communication skills to bridge the gap between business goals and technical execution,
-              ensuring teams deliver value iteratively and reliably.
-            </p>
-
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              {[
-                { label: "Location", value: "Noida, India" },
-                { label: "Email", value: "techlead.ps@gmail.com" },
-                { label: "Focus", value: "Backend & Cloud" },
-                { label: "Availability", value: "Open to Opportunities" },
-              ].map((item) => (
-                <div key={item.label} className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-violet-500 mt-2 flex-shrink-0" />
-                  <div>
-                    <span className="text-xs text-gray-400 block">{item.label}</span>
-                    <span className="text-sm font-medium text-gray-700">{item.value}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white font-medium px-7 py-3 rounded-full transition-colors shadow-lg shadow-violet-200"
-            >
-              Get in Touch
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
           </div>
         </div>
       </div>
