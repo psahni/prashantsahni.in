@@ -29,7 +29,7 @@ export default function Hero() {
                 href="https://github.com/psahni"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute -left-4 top-8 bg-white rounded-xl shadow-lg px-3 py-2 flex items-center gap-2 text-xs font-medium text-gray-700 hover:shadow-xl transition-shadow"
+                className="absolute left-2 top-4 sm:-left-4 sm:top-8 bg-white rounded-xl shadow-lg px-3 py-2 flex items-center gap-2 text-xs font-medium text-gray-700 hover:shadow-xl transition-shadow"
               >
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55v-1.9c-3.19.69-3.86-1.54-3.86-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.95 10.95 0 0 1 5.74 0c2.18-1.48 3.14-1.17 3.14-1.17.63 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.13v3.17c0 .3.2.66.79.55C20.22 21.37 23.5 17.07 23.5 12 23.5 5.73 18.27.5 12 .5z" />
@@ -40,7 +40,7 @@ export default function Hero() {
                 href="https://www.linkedin.com/in/prashantsahni5/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute -right-4 bottom-12 bg-white rounded-xl shadow-lg px-3 py-2 flex items-center gap-2 text-xs font-medium text-blue-600 hover:shadow-xl transition-shadow"
+                className="absolute right-2 bottom-8 sm:-right-4 sm:bottom-12 bg-white rounded-xl shadow-lg px-3 py-2 flex items-center gap-2 text-xs font-medium text-blue-600 hover:shadow-xl transition-shadow"
               >
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM6.9 20.45H3.78V9H6.9v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z" />
@@ -57,9 +57,11 @@ export default function Hero() {
               Engineering Leader &amp; Developer
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Hello, I&apos;m{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">
-                Prashant Sahni
+              <span className="block">Hello,</span>
+              <span className="block">I&apos;m{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">
+                  Prashant Sahni
+                </span>
               </span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg">
