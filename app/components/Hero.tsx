@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left — profile card */}
           <div className="flex justify-center lg:justify-start">
-            <div className="relative">
+            <div className="relative mx-auto lg:mx-0">
               <div className="w-72 h-72 lg:w-80 lg:h-80 rounded-3xl overflow-hidden shadow-2xl relative">
                 <Image
                   src="/profile.jpg"
@@ -56,7 +56,7 @@ export default function Hero() {
               <span className="w-6 h-0.5 bg-violet-600 inline-block" />
               Engineering Leader &amp; Developer
             </span>
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
               Hello, I&apos;m{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">
                 Prashant Sahni

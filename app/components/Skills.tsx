@@ -39,7 +39,7 @@ const skillCategories = [
     color: "from-pink-500 to-rose-600",
     lightColor: "bg-pink-50 border-pink-200",
     textColor: "text-pink-700",
-    skills: [ "Stakeholder Management", "Hiring", "Code Review", "Technical Mentoring", "Roadmap Planning", "Delievery", "Cross Team Colloboaration"],
+    skills: ["Stakeholder Management", "Hiring", "Code Review", "Technical Mentoring", "Roadmap Planning", "Delivery", "Cross-Team Collaboration"],
   },
 ];
 

@@ -4,14 +4,14 @@ export default function About() {
   return (
     <section id="about" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left — content */}
           <div>
             <span className="inline-flex items-center gap-2 text-violet-600 font-medium text-sm mb-3">
               <span className="w-6 h-0.5 bg-violet-600 inline-block" />
               About Me
             </span>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6 leading-snug">
               I am an experienced{" "}
               <span className="text-violet-600">Engineering Leader</span> and Developer
             </h2>
@@ -26,7 +26,7 @@ export default function About() {
               ensuring teams deliver value iteratively and reliably.
             </p>
 
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {[
                 { label: "Location", value: "New Delhi, India" },
                 { label: "Email", value: "techlead.ps@gmail.com" },

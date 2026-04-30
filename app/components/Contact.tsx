@@ -29,13 +29,13 @@ export default function Contact() {
             Get In Touch
             <span className="w-6 h-0.5 bg-violet-600 inline-block" />
           </span>
-          <h2 className="text-4xl font-bold text-gray-900">Let&apos;s Discuss Your Project</h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900">Let&apos;s Discuss Your Project</h2>
           <p className="text-gray-500 mt-3 max-w-xl mx-auto">
             Have a project in mind or just want to connect? Drop me a message and I&apos;ll get back to you.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Contact info */}
           <div className="lg:col-span-2 space-y-6">
             {[
@@ -77,7 +77,7 @@ export default function Contact() {
                   </svg>
                 ),
                 label: "Location",
-                value: "Noida, India",
+                value: "New Delhi, India",
                 href: null,
               },
             ].map((item) => (

@@ -46,7 +46,7 @@ export default function Navbar() {
         </a>
 
         <button
-          className="md:hidden p-2 text-gray-600"
+          className="md:hidden p-3 text-gray-600"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -62,7 +62,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="block py-2 text-sm text-gray-600 hover:text-violet-600 font-medium"
+              className="block py-3 text-sm text-gray-600 hover:text-violet-600 font-medium"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
