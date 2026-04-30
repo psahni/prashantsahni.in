@@ -4,21 +4,21 @@ const skillCategories = [
     color: "from-violet-500 to-indigo-600",
     lightColor: "bg-violet-50 border-violet-200",
     textColor: "text-violet-700",
-    skills: ["Go (Golang)", "Node.js", "Ruby", "REST APIs", "GraphQL", "Microservices"],
+    skills: ["Go", "Node.js", "Ruby", "REST APIs", "GraphQL", "Microservices"],
   },
   {
     title: "Frontend",
     color: "from-indigo-500 to-blue-600",
     lightColor: "bg-indigo-50 border-indigo-200",
     textColor: "text-indigo-700",
-    skills: ["React.js", "Next.js", "Vue.js", "TypeScript", "Tailwind CSS", "HTML5 / CSS3"],
+    skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "HTML5 / CSS3"],
   },
   {
     title: "Cloud & DevOps",
     color: "from-sky-500 to-cyan-600",
     lightColor: "bg-sky-50 border-sky-200",
     textColor: "text-sky-700",
-    skills: ["AWS (SAA)", "Docker", "CI/CD", "GitHub Actions", "Nginx", "Linux"],
+    skills: ["AWS (Certified)", "Docker", "CI/CD", "GitHub Actions",  "Kubernetes"],
   },
   {
     title: "Databases",
@@ -28,18 +28,18 @@ const skillCategories = [
     skills: ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Elasticsearch", "DynamoDB"],
   },
   {
-    title: "Architecture",
+    title: "System Design",
     color: "from-orange-500 to-amber-600",
     lightColor: "bg-orange-50 border-orange-200",
     textColor: "text-orange-700",
-    skills: ["System Design", "HLD / LLD", "Event-Driven", "CQRS", "Domain-Driven Design", "Clean Architecture"],
+    skills: ["HLD",  "LLD", "Event-Driven", "Kafka", "Scalability", "CAP Theorem", "Rate Limiting"],
   },
   {
     title: "Engineering Leadership",
     color: "from-pink-500 to-rose-600",
     lightColor: "bg-pink-50 border-pink-200",
     textColor: "text-pink-700",
-    skills: ["Team Building", "Agile / Scrum", "Code Review", "Technical Mentoring", "Roadmap Planning", "Stakeholder Management"],
+    skills: [ "Stakeholder Management", "Hiring", "Code Review", "Technical Mentoring", "Roadmap Planning", "Delievery", "Cross Team Colloboaration"],
   },
 ];
 

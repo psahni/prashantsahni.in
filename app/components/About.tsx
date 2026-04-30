@@ -30,8 +30,8 @@ export default function About() {
               {[
                 { label: "Location", value: "New Delhi, India" },
                 { label: "Email", value: "techlead.ps@gmail.com" },
-                { label: "Focus", value: "Backend & Cloud" },
-                { label: "Availability", value: "Open to Opportunities" },
+                // { label: "Focus", value: "Backend & Cloud" },
+                // { label: "Availability", value: "Open to Opportunities" },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-violet-500 mt-2 flex-shrink-0" />
