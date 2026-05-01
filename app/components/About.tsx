@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TypewriterHeading from "./TypewriterHeading";
 
 export default function About() {
   return (
@@ -11,10 +12,19 @@ export default function About() {
               <span className="w-6 h-0.5 bg-violet-600 inline-block" />
               About Me
             </span>
-            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6 leading-snug">
-              I am an experienced{" "}
-              <span className="text-violet-600">Engineering Leader</span> and Developer
-            </h2>
+            <TypewriterHeading
+              className="text-2xl md:text-4xl font-bold text-gray-900 mb-3 leading-snug"
+              tokens={[
+                { text: "I " },
+                { text: "am " },
+                { text: "an " },
+                { text: "experienced " },
+                { text: "Engineering ", className: "text-violet-600" },
+                { text: "Leader", className: "text-violet-600" },
+                { text: " and " },
+                { text: "Developer" },
+              ]}
+            />
             <p className="text-gray-600 mb-5 leading-relaxed">
               With over 15 years of experience in software engineering, I specialize in building scalable,
               high‑performance systems and leading cross‑functional engineering teams. My expertise spans
