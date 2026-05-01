@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { lora } from "@/app/fonts";
 
 export default function Hero() {
   return (
@@ -58,34 +59,47 @@ export default function Hero() {
               <span className="w-6 h-0.5 bg-violet-600 inline-block" />
               Engineering Leader &amp; Developer
             </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              <span className="block">Hello,</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-bold text-gray-900 leading-tight mb-6">
+              <span className="block">Hi,</span>
               <span className="block">I&apos;m{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">
                   Prashant Sahni
                 </span>
               </span>
             </h1>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg">
-              I build scalable systems and lead engineering teams. Passionate about clean architecture,
-              full‑stack development, and delivering high‑quality software from idea to production.
-            </p>
+            <blockquote className={`${lora.className} relative text-xl italic text-gray-700 mb-8 leading-relaxed max-w-lg`}>
+              <span className="block text-6xl text-violet-400 leading-none mb-2 select-none">&ldquo;</span>
+              <span className="block">
+                I partner with founders, co-owning the vision, to take ideas from zero to launch with co-founder energy and engineering depth.
+              </span>
+              <span className="block text-6xl text-violet-400 leading-none mt-2 text-right select-none">&rdquo;</span>
+            </blockquote>
             <div className="flex flex-wrap gap-4">
-              <a
-                href="#contact"
+              {/* <a
+                href="https://drive.google.com/file/d/1ClaJnhOHoysJ8ZEslhvXiIt3w7dtMOu_/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white font-medium px-7 py-3 rounded-full transition-colors shadow-lg shadow-violet-200"
               >
-                Hire Me
+                Download Resume
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
-              <a
-                href="#portfolio"
-                className="inline-flex items-center gap-2 border-2 border-violet-200 hover:border-violet-400 text-violet-700 font-medium px-7 py-3 rounded-full transition-colors"
-              >
-                View Work
-              </a>
+              </a> */}
+              <div className="relative inline-block">
+                <span aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-full">
+                  <span className="border-travel-dot" />
+                </span>
+                <a
+                  href="#portfolio"
+                  className="inline-flex items-center gap-2 bg-violet-50 hover:bg-violet-100 border-2 border-violet-300 hover:border-violet-500 text-violet-700 hover:text-violet-900 font-medium px-7 py-3 rounded-full transition-all shadow-sm hover:shadow-md hover:shadow-violet-200 group"
+                >
+                  View Work
+                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </div>
             </div>
 
             {/* Stats */}
@@ -105,6 +119,25 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <style>{`
+        .border-travel-dot {
+          position: absolute;
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          background: #7c3aed;
+          box-shadow: 0 0 10px 5px rgba(124, 58, 237, 0.5);
+          offset-path: inset(0 round 9999px);
+          offset-distance: 0%;
+          opacity: 0;
+          animation: dotRoundTrip 1.6s ease-in-out 0.9s 1 forwards;
+        }
+        @keyframes dotRoundTrip {
+          0%   { offset-distance: 0%;   opacity: 1; }
+          95%  { offset-distance: 95%;  opacity: 1; }
+          100% { offset-distance: 100%; opacity: 0; }
+        }
+      `}</style>
     </section>
   );
 }

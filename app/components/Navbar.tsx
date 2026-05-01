@@ -39,10 +39,12 @@ export default function Navbar() {
         </ul>
 
         <a
-          href="#contact"
+          href="https://drive.google.com/file/d/1ClaJnhOHoysJ8ZEslhvXiIt3w7dtMOu_/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white text-sm font-medium px-5 py-2 rounded-full transition-colors"
         >
-          Hire Me
+          Download Resume
         </a>
 
         <button
