@@ -50,7 +50,7 @@ export default function LeadBanner({
         </p>
 
         {subtext && (
-          <p className={`${lora.className} text-slate-300 text-base md:text-lg mb-10 max-w-xl mx-auto leading-relaxed`}>
+          <p className={`${lora.className} text-slate-300 text-base md:text-lg mb-10 max-w-3xl mx-auto leading-relaxed whitespace-pre-line`}>
             {subtext}
           </p>
         )}

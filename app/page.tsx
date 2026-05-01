@@ -20,7 +20,7 @@ export default function Home() {
           line1="You don't need a dev."
           line2="You need a builder who leads."
           highlight="builder who leads."
-          subtext="I don't work for founders. I build alongside them."
+          subtext={"I don't work for founders. I build alongside them.\nPart engineering leader, part hands-on dev — whatever your stage needs."}
           ctaText="Let's Build Together"
           ctaHref="#contact"
         />
