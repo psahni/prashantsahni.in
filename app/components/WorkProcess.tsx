@@ -76,16 +76,16 @@ export default function WorkProcess() {
           <div>
             <span className="inline-flex items-center gap-2 text-violet-600 font-medium text-sm mb-3">
               <span className="w-6 h-0.5 bg-violet-600 inline-block" />
-              How I Work
+              Process
             </span>
             <h2 className="text-4xl font-bold text-gray-900 leading-snug">
-              My Work Process
+              Build to Iterate
             </h2>
           </div>
           <div className="lg:pt-12">
             <p className="text-gray-600 leading-relaxed">
-              I follow a fully iterative SDLC methodology — combining rigorous planning with agile execution.
-              Every project benefits from clear communication, solid architecture, and continuous delivery.
+              Flexible by design, accelerated by AI. I don&apos;t follow a rigid playbook — I adapt to what the product needs at every stage.
+              The process adapts to the product, not the other way around.
             </p>
           </div>
         </div>

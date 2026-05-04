@@ -5,19 +5,33 @@ import { useState } from "react";
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const mailto =
-      `mailto:techlead.ps@gmail.com` +
-      `?subject=${encodeURIComponent(form.subject || "Portfolio Inquiry")}` +
-      `&body=${encodeURIComponent(`Hi Prashant,\n\nName: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
-    window.location.href = mailto;
-    setSubmitted(true);
+    setSending(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Failed to send message");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -113,8 +127,8 @@ export default function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Your email client is ready!</h3>
-                <p className="text-gray-500 text-sm">Send the pre-filled email to reach Prashant directly.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Message sent!</h3>
+                <p className="text-gray-500 text-sm">Thanks for reaching out. I&apos;ll get back to you soon.</p>
                 <button
                   onClick={() => setSubmitted(false)}
                   className="mt-6 text-violet-600 hover:text-violet-800 text-sm font-medium"
@@ -173,14 +187,20 @@ export default function Contact() {
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-violet-400 focus:ring-2 focus:ring-violet-100 outline-none text-sm text-gray-700 placeholder-gray-400 transition-colors resize-none"
                   />
                 </div>
+                {error && (
+                  <p className="text-sm text-red-500">{error}</p>
+                )}
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-700 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors shadow-lg shadow-violet-200"
+                  disabled={sending}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold px-7 py-3.5 rounded-xl transition-colors shadow-lg shadow-violet-200"
                 >
-                  Send Message
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                  </svg>
+                  {sending ? "Sending…" : "Send Message"}
+                  {!sending && (
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                  )}
                 </button>
               </form>
             )}

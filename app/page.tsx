@@ -17,10 +17,10 @@ export default function Home() {
       <main>
         <Hero />
         <LeadBanner
-          line1="You don't need a dev."
+          line1="You just don't need a dev."
           line2="You need a builder who leads."
           highlight="builder who leads."
-          subtext={"I don't work for founders. I build alongside them.\nPart engineering leader, part hands-on dev — whatever your stage needs."}
+          subtext={"I partner with founders to ship fast, scale smart, and lead with intent.\n I build alongside them.\nPart engineering leader, part hands-on dev — whatever your stage needs."}
           ctaText="Let's Build Together"
           ctaHref="#contact"
         />
