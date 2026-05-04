@@ -35,6 +35,13 @@ const skillCategories = [
     skills: ["HLD",  "LLD", "Event-Driven", "Kafka", "Scalability", "CAP Theorem", "Rate Limiting"],
   },
   {
+    title: "AI & Developer Tools",
+    color: "from-fuchsia-500 to-purple-600",
+    lightColor: "bg-fuchsia-50 border-fuchsia-200",
+    textColor: "text-fuchsia-700",
+    skills: ["Claude (Anthropic)", "Cursor AI", "Prompt Engineering", "AI-Assisted Development", "LLM Integration", "Context Engineering"],
+  },
+  {
     title: "Engineering Leadership",
     color: "from-pink-500 to-rose-600",
     lightColor: "bg-pink-50 border-pink-200",
