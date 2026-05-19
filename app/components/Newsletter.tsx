@@ -23,7 +23,7 @@ export default function Newsletter() {
                 Practical insights for developers who want to level up — from coding to cloud to team building.
               </p>
               <div className="flex flex-wrap gap-3">
-                {["System Design", "Clean Architecture", "Engineering Culture", "Cloud & DevOps", "Leadership"].map(
+                {["Claude", "System Design",  "Application development", "Engineering Culture", "Cloud & DevOps", "Leadership"].map(
                   (tag) => (
                     <span key={tag} className="px-3 py-1 bg-white/15 text-white text-xs rounded-full font-medium">
                       {tag}
