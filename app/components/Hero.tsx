@@ -18,7 +18,7 @@ export default function Hero() {
             <div className="flex flex-row lg:flex-col items-center lg:items-start gap-4 lg:gap-5">
               <div className="min-w-60 w-60 h-60 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-3xl overflow-hidden shadow-2xl relative">
                 <Image
-                  src="/profile.jpg"
+                  src="/pic2.jpg"
                   alt="Prashant Sahni"
                   fill
                   className="object-cover object-top scale-110"

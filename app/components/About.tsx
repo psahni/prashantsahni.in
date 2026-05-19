@@ -69,7 +69,7 @@ export default function About() {
             <div className="bg-gradient-to-br from-violet-50 to-indigo-50 rounded-3xl p-8 border border-violet-100">
               <div className="w-32 h-32 rounded-2xl mx-auto mb-6 relative overflow-hidden shadow-xl ring-4 ring-violet-100">
                 <Image
-                  src="/profile.jpg"
+                  src="/pic1.jpg"
                   alt="Prashant Sahni"
                   fill
                   className="object-cover object-top"
