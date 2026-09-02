@@ -1,12 +1,14 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import LeadBanner from "./components/LeadBanner";
-import About from "./components/About";
+import WhatIDo from "./components/WhatIDo";
 import WorkProcess from "./components/WorkProcess";
+import ProductSprint from "./components/ProductSprint";
 import Skills from "./components/Skills";
+import ProductOptimization from "./components/ProductOptimization";
+import Outcomes from "./components/Outcomes";
 import Portfolio from "./components/Portfolio";
+import About from "./components/About";
 import Newsletter from "./components/Newsletter";
-import WorkTogether from "./components/WorkTogether";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -14,29 +16,21 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="top">
         <Hero />
-        <LeadBanner
-          line1="You just don't need a dev."
-          line2="You need a builder who leads."
-          highlight="builder who leads."
-          subtext={"I partner with founders to ship fast, scale smart, and lead with intent.\n I build alongside them.\nPart engineering leader, part hands-on dev — whatever your stage needs."}
-          ctaText="Let's Build Together"
-          ctaHref="#contact"
-        />
-        <About />
+        <WhatIDo />
         <WorkProcess />
-        <LeadBanner
-          line1="Got a product problem? Let's solve it, fix it, and build what's next."
-          highlight="build what's next."
-        />
+        <ProductSprint />
         <Skills />
+        <ProductOptimization />
+        <Outcomes />
         <Portfolio />
+        <About />
         <Newsletter />
-        <WorkTogether />
         <Contact />
       </main>
       <Footer />
     </>
   );
 }
+

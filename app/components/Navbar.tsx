@@ -3,52 +3,43 @@
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
+  { label: "Work", href: "#work" },
+  { label: "How I Work", href: "#process" },
+  { label: "Expertise", href: "#expertise" },
   { label: "About", href: "#about" },
-  { label: "Process", href: "#process" },
-  { label: "Skills", href: "#skills" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Newsletter", href: "#newsletter" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-full bg-violet-600 flex items-center justify-center text-white font-bold text-sm">
-            PS
-          </div>
-          <span className="font-semibold text-gray-900 text-lg">Prashant Sahni</span>
+    <header className="sticky top-0 bg-[#fafaf9e8] border-b border-[#dededb] backdrop-blur-md z-50">
+      <div className="max-w-[1180px] mx-auto px-7 h-[72px] flex items-center justify-between">
+        <a href="#top" className="bg-[#111111] text-[#fafaf9] px-2.5 py-1.5 font-bold text-sm tracking-tight hover:opacity-90 transition-opacity">
+          PS
         </a>
 
-        <ul className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-7 text-sm text-[#656565]">
           {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-sm text-gray-600 hover:text-violet-600 transition-colors font-medium"
-              >
-                {link.label}
-              </a>
-            </li>
+            <a
+              key={link.href}
+              href={link.href}
+              className="hover:text-[#111111] transition-colors"
+            >
+              {link.label}
+            </a>
           ))}
-        </ul>
+        </nav>
 
         <a
-          href="https://drive.google.com/file/d/1ClaJnhOHoysJ8ZEslhvXiIt3w7dtMOu_/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white text-sm font-medium px-5 py-2 rounded-full transition-colors"
+          href="#contact"
+          className="font-bold text-sm text-[#111111] hover:text-[#4f46e5] transition-colors flex items-center gap-1"
         >
-          Download Resume
+          Let&apos;s Talk <span className="text-[#4f46e5]">→</span>
         </a>
 
         <button
-          className="md:hidden p-3 text-gray-600"
+          className="md:hidden p-2 text-[#111111]"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -59,12 +50,12 @@ export default function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4">
+        <div className="md:hidden bg-[#fafaf9] border-t border-[#dededb] px-7 py-4 flex flex-col gap-3">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="block py-3 text-sm text-gray-600 hover:text-violet-600 font-medium"
+              className="text-sm text-[#656565] hover:text-[#111111] font-medium py-1"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
@@ -72,6 +63,7 @@ export default function Navbar() {
           ))}
         </div>
       )}
-    </nav>
+    </header>
   );
 }
+

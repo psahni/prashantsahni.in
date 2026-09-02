@@ -1,26 +1,31 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Prashant Sahni — Engineering Leader & Developer",
+  title: "Prashant K. Sahni — AI-Accelerated Product Engineering",
   description:
-    "Portfolio of Prashant Sahni — Engineering Leader and Full-Stack Developer specialising in scalable backend systems, cloud architecture, and engineering team leadership.",
-  keywords: ["Prashant Sahni", "Engineering Leader", "Full Stack Developer", "Go", "Node.js", "React", "AWS", "System Design"],
-  authors: [{ name: "Prashant Sahni", url: "https://www.linkedin.com/in/prashantsahni5/" }],
+    "I help founders and teams turn ideas into working software — and help existing products become faster, more reliable and ready to scale.",
+  keywords: ["Prashant K. Sahni", "Product Engineer", "AI-Accelerated Development", "Full Stack Developer", "Next.js", "React", "Python", "Go", "AWS"],
+  authors: [{ name: "Prashant K. Sahni", url: "https://www.linkedin.com/in/prashantsahni5/" }],
   openGraph: {
-    title: "Prashant Sahni — Engineering Leader & Developer",
-    description: "Portfolio of Prashant Sahni — Engineering Leader and Full-Stack Developer.",
+    title: "Prashant K. Sahni — AI-Accelerated Product Engineering",
+    description: "I help founders and teams turn ideas into working software — and help existing products become faster, more reliable and ready to scale.",
     type: "website",
   },
 };
@@ -31,8 +36,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} antialiased`}>
       <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
+
