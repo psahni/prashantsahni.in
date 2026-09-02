@@ -15,6 +15,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-ivory: var(--bg-ivory);
+  --color-surface: var(--bg-surface);
+  --color-forest: var(--forest-primary);
+  --color-lime: var(--lime-accent);
+  --color-muted: var(--text-muted);
+  --color-warm: var(--border-warm);
   --font-sans: var(--font-geist-sans);
   --font-display: var(--font-space-grotesk);
   --font-mono: var(--font-geist-mono);
