@@ -1,23 +1,81 @@
+/* Theme: Jupiter — Editorial AI Product Engineering */
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #fafaf9;
+  --ink: #111111;
+  --muted: #656565;
+  --line: #dededb;
+  --blue: #4f46e5;
+  --background: var(--bg);
+  --foreground: var(--ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-inter), Inter, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-space-grotesk), var(--font-inter), sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
+/* Custom design utilities */
+.product-loop-container {
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  background: #f2f2ef;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-loop-circle {
+  width: 240px;
+  height: 240px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+}
+
+.product-loop-circle::before {
+  content: 'UNDERSTAND  ·  BUILD  ·  SHOW  ·  IMPROVE';
+  position: absolute;
+  width: 340px;
+  color: var(--blue);
+  font: 10px monospace;
+  letter-spacing: 0.14em;
+  animation: spinLoop 25s linear infinite;
+}
+
+@keyframes spinLoop {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 640px) {
+  .product-loop-circle::before {
+    width: 260px;
+    font-size: 8px;
+  }
+}
+

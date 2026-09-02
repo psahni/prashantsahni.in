@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"C:/Users/DELL/Pictures/my pics/pic1.jpg\" \"e:/Prashant/development/2026/prashantsahni.in/public/pic1.jpg\")",
+      "Bash(cp \"C:/Users/DELL/Pictures/my pics/pic2.jpg\" \"e:/Prashant/development/2026/prashantsahni.in/public/pic2.jpg\")",
+      "Bash(cp \"C:/Users/DELL/Pictures/my pics/pic1.jpg\" \"e:/Prashant/development/2026/prashantsahni.in/public/pic1.jpg\" && echo \"Done\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(vercel --prod)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\DELL\\Pictures\\my pics"
+    ]
+  }
+}
