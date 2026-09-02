@@ -9,13 +9,13 @@ It is a modern, single-page application (SPA) built using Next.js 16 (App Router
 ## Tech Stack & Architecture
 
 - **Framework**: [Next.js 16](file:///e:/Prashant/development/2026/prashantsahni.in/package.json) (App Router, Turbopack, React 19)
-- **Framework**: [Next.js 16](file:///e:/Prashant/development/2026/prashantsahni.in/package.json) (App Router, Turbopack, React 19)
-- **Active Theme**: **Ivory + Forest + Lime Theme** (Ultra-premium, editorial, AI-accelerated product engineering design system)
+- **Active Theme**: **Theme Ivory** (Ultra-premium, editorial, AI-accelerated product engineering design system)
 - **Styling**: [Tailwind CSS v4](file:///e:/Prashant/development/2026/prashantsahni.in/app/globals.css) (`@tailwindcss/postcss`) with custom CSS variables
-- **Typography**:
-  - **Sans-Serif**: `Geist` (`next/font/google`)
+- **Typography (Theme Ivory)**:
+  - **Display / Headings**: `Space Grotesk` (`next/font/google`)
+  - **Body Text**: `Geist` (`next/font/google`)
   - **Monospace**: `Geist Mono` (`next/font/google`)
-- **Color System**:
+- **Color System (Theme Ivory)**:
   - **Warm Ivory Background**: `#F5F3ED` (70–80% dominant page background)
   - **Warm Surface**: `#FFFDF8` (Card & container surfaces)
   - **Deep Forest Primary**: `#17372D` (15–25% headlines, dark sections, primary buttons, footer)
