@@ -2,88 +2,81 @@ export default function Skills() {
   const capabilities = [
     {
       title: "Product Engineering",
-      description: "React, Next.js, TypeScript, Frontend Architecture",
-      icon: (
-        <svg className="w-6 h-6 text-[#4f46e5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-        </svg>
-      ),
+      skills: ["React", "Next.js", "TypeScript", "JavaScript", "Frontend Architecture"],
     },
     {
-      title: "Backend Engineering",
-      description: "Python, Go, Node.js, Distributed Systems",
-      icon: (
-        <svg className="w-6 h-6 text-[#4f46e5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-        </svg>
-      ),
+      title: "Backend",
+      skills: ["Python", "Go", "Node.js", "Ruby on Rails", "APIs", "Distributed Systems"],
     },
     {
-      title: "Data & Databases",
-      description: "PostgreSQL, Redis, NoSQL, Sanity CMS",
-      icon: (
-        <svg className="w-6 h-6 text-[#4f46e5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-        </svg>
-      ),
+      title: "Data",
+      skills: ["PostgreSQL", "PostGIS", "NoSQL", "Redis", "Sanity CMS"],
     },
     {
       title: "Cloud & DevOps",
-      description: "AWS, GCP, Vercel, Docker, Kubernetes, CI/CD",
-      icon: (
-        <svg className="w-6 h-6 text-[#4f46e5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 001-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z" />
-        </svg>
-      ),
+      skills: ["AWS", "GCP", "Vercel", "Docker", "Kubernetes", "Kafka", "CI/CD", "Observability"],
     },
     {
       title: "Performance & Scale",
-      description: "Frontend Performance, Backend Optimization, Scalability",
-      icon: (
-        <svg className="w-6 h-6 text-[#4f46e5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
+      skills: ["Frontend Performance", "Backend Optimization", "Database Optimization", "Scalability", "Reliability"],
     },
     {
       title: "AI & Engineering Productivity",
-      description: "LLM Agents, LangChain, RAG, Vector Databases, MLOps",
-      icon: (
-        <svg className="w-6 h-6 text-[#4f46e5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L5.596 15.12a2 2 0 00-1.783.58l-.707.707a1 1 0 000 1.414l5.657 5.657a1 1 0 001.414 0l.707-.707a2 2 0 00.58-1.783l-.477-2.387a6 6 0 01.517-3.86l.158-.318a6 6 0 00.517-3.86l-.477-2.387a2 2 0 00-.547-1.022L10.5 4.5" />
-        </svg>
-      ),
+      skills: ["LLM Agent Orchestration", "LangChain", "LangGraph", "RAG", "Prompt Engineering", "Vector Databases", "MLOps", "AI Infrastructure"],
     },
   ];
 
   return (
-    <section id="expertise" className="py-24 lg:py-[120px] border-t border-[#dededb]">
+    <section id="expertise" className="py-24 lg:py-[120px] border-t border-[#D9D8D0] bg-[#F5F3ED]">
       <div className="max-w-[1180px] mx-auto px-7">
-        <p className="text-[#4f46e5] font-mono text-[11px] font-bold tracking-[0.18em] uppercase mb-4">
-          ENGINEERING CAPABILITY
+        <p className="text-[#17372D] font-mono text-[11px] font-bold tracking-[0.18em] uppercase mb-4 flex items-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#C8F04A]" />
+          ENGINEERING EXPERTISE
         </p>
-        <h2 className="text-4xl sm:text-6xl font-bold leading-none tracking-[-0.06em] text-[#111111]">
+        <h2 className="text-4xl sm:text-6xl font-bold leading-none tracking-[-0.06em] text-[#17372D]">
           ENGINEERING DEPTH,<br />
-          <span className="text-[#4f46e5]">ACCELERATED BY AI.</span>
+          <span className="text-[#17372D]">ACCELERATED BY AI.</span>
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-px bg-[#dededb] border border-[#dededb] mt-12">
+        {/* Callout banner */}
+        <div className="mt-8 p-6 bg-[#FFFDF8] border border-[#D9D8D0] rounded-lg shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h3 className="text-sm font-mono font-bold text-[#17372D] uppercase tracking-wider flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#C8F04A]" />
+              THE STACK IS NOT FIXED.
+            </h3>
+            <p className="text-[#66706A] text-sm mt-1">
+              I can work with the framework, infrastructure and technology choices your product requires.
+            </p>
+          </div>
+        </div>
+
+        {/* 6 Structured Categories Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {capabilities.map((item) => (
-            <article key={item.title} className="bg-[#fafaf9] p-8 flex flex-col justify-between min-h-[220px]">
+            <article key={item.title} className="bg-[#FFFDF8] border border-[#D9D8D0] p-7 rounded-lg shadow-sm hover:border-[#17372D] transition-colors flex flex-col justify-between">
               <div>
-                <div className="mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold text-[#111111] mb-2">{item.title}</h3>
-                <p className="text-[#656565] text-sm leading-relaxed">{item.description}</p>
+                <h3 className="text-lg font-bold text-[#17372D] mb-4 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C8F04A]" />
+                  {item.title}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {item.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="bg-[#F5F3ED] text-[#17372D] text-xs font-mono px-2.5 py-1 rounded border border-[#D9D8D0]"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </article>
           ))}
         </div>
-
-        <p className="text-xs text-[#656565] mt-6 italic">
-          The stack is not fixed. I can work with the technologies your product requires.
-        </p>
       </div>
     </section>
   );
 }
+
 

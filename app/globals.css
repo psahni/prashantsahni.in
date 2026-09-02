@@ -1,46 +1,46 @@
-/* Theme: Jupiter — Editorial AI Product Engineering */
+/* Theme: Ivory + Forest + Lime — Editorial AI Product Engineering */
 @import "tailwindcss";
 
 :root {
-  --bg: #fafaf9;
-  --ink: #111111;
-  --muted: #656565;
-  --line: #dededb;
-  --blue: #4f46e5;
-  --background: var(--bg);
-  --foreground: var(--ink);
+  --bg-ivory: #F5F3ED;
+  --bg-surface: #FFFDF8;
+  --forest-primary: #17372D;
+  --lime-accent: #C8F04A;
+  --text-muted: #66706A;
+  --border-warm: #D9D8D0;
+  --background: var(--bg-ivory);
+  --foreground: var(--forest-primary);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-space-grotesk);
-  --font-mono: var(--font-jetbrains-mono);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--font-inter), Inter, Arial, sans-serif;
+  background: var(--bg-ivory);
+  color: var(--forest-primary);
+  font-family: var(--font-geist-sans), Inter, Arial, sans-serif;
   line-height: 1.6;
 }
 
 h1, h2, h3, .font-display {
-  font-family: var(--font-space-grotesk), var(--font-inter), sans-serif;
+  font-family: var(--font-geist-sans), Inter, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom design utilities */
+/* Custom engineering design system utilities */
 .product-loop-container {
   aspect-ratio: 1;
-  border: 1px solid var(--line);
+  border: 1px solid var(--border-warm);
   display: grid;
   place-items: center;
-  background: #f2f2ef;
+  background: var(--bg-surface);
   position: relative;
   overflow: hidden;
 }
@@ -48,22 +48,23 @@ html {
 .product-loop-circle {
   width: 240px;
   height: 240px;
-  border: 1px solid #aaa;
+  border: 1px solid var(--border-warm);
   border-radius: 50%;
   display: grid;
   place-items: center;
   text-align: center;
   font-weight: 700;
   position: relative;
+  background: var(--bg-ivory);
 }
 
 .product-loop-circle::before {
   content: 'UNDERSTAND  ·  BUILD  ·  SHOW  ·  IMPROVE';
   position: absolute;
-  width: 340px;
-  color: var(--blue);
+  width: 330px;
+  color: var(--forest-primary);
   font: 10px monospace;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   animation: spinLoop 25s linear infinite;
 }
 
@@ -78,4 +79,5 @@ html {
     font-size: 8px;
   }
 }
+
 

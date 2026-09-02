@@ -13,18 +13,18 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 bg-[#fafaf9e8] border-b border-[#dededb] backdrop-blur-md z-50">
+    <header className="sticky top-0 bg-[#F5F3ED]/90 border-b border-[#D9D8D0] backdrop-blur-md z-50">
       <div className="max-w-[1180px] mx-auto px-7 h-[72px] flex items-center justify-between">
-        <a href="#top" className="bg-[#111111] text-[#fafaf9] px-2.5 py-1.5 font-bold text-sm tracking-tight hover:opacity-90 transition-opacity">
-          PS
+        <a href="#top" className="bg-[#17372D] text-[#F5F3ED] px-3 py-1.5 font-bold text-sm tracking-tight hover:opacity-95 transition-opacity flex items-center gap-1.5">
+          PS<span className="w-1.5 h-1.5 rounded-full bg-[#C8F04A]" />
         </a>
 
-        <nav className="hidden md:flex items-center gap-7 text-sm text-[#656565]">
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#17372D]">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="hover:text-[#111111] transition-colors"
+              className="hover:text-[#66706A] transition-colors relative py-1"
             >
               {link.label}
             </a>
@@ -33,13 +33,13 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="font-bold text-sm text-[#111111] hover:text-[#4f46e5] transition-colors flex items-center gap-1"
+          className="font-bold text-sm text-[#17372D] hover:opacity-80 transition-opacity flex items-center gap-1.5 group"
         >
-          Let&apos;s Talk <span className="text-[#4f46e5]">→</span>
+          Let&apos;s Talk <span className="text-[#17372D] font-mono group-hover:translate-x-0.5 transition-transform">→</span>
         </a>
 
         <button
-          className="md:hidden p-2 text-[#111111]"
+          className="md:hidden p-2 text-[#17372D]"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -50,12 +50,12 @@ export default function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-[#fafaf9] border-t border-[#dededb] px-7 py-4 flex flex-col gap-3">
+        <div className="md:hidden bg-[#F5F3ED] border-t border-[#D9D8D0] px-7 py-4 flex flex-col gap-3">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-[#656565] hover:text-[#111111] font-medium py-1"
+              className="text-sm text-[#17372D] hover:text-[#66706A] font-medium py-1"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
@@ -66,4 +66,5 @@ export default function Navbar() {
     </header>
   );
 }
+
 
