@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="max-w-[1180px] mx-auto px-7 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
         {/* Left Column */}
         <div>
-          <p className="text-[#17372D] font-mono text-[11px] font-bold tracking-[0.18em] mb-[22px] uppercase flex items-center gap-2">
+          <p className="text-[#17372D] font-mono text-[12px] font-bold tracking-[0.18em] mb-[22px] uppercase flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#C8F04A] inline-block shadow-sm" />
             AI-ACCELERATED PRODUCT ENGINEERING
           </p>

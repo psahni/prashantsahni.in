@@ -29,7 +29,7 @@ export default function Skills() {
   return (
     <section id="expertise" className="py-24 lg:py-[120px] border-t border-[#D9D8D0] bg-[#F5F3ED]">
       <div className="max-w-[1180px] mx-auto px-7">
-        <p className="text-[#17372D] font-mono text-[11px] font-bold tracking-[0.18em] uppercase mb-4 flex items-center gap-2">
+        <p className="text-[#17372D] font-mono text-[12px] font-bold tracking-[0.18em] uppercase mb-4 flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-[#C8F04A]" />
           ENGINEERING EXPERTISE
         </p>

@@ -28,7 +28,7 @@ export default function WorkProcess() {
         <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20 items-start">
           {/* Left column */}
           <div>
-            <p className="text-[#C8F04A] font-mono text-[11px] font-bold tracking-[0.18em] uppercase mb-4 flex items-center gap-2">
+            <p className="text-[#C8F04A] font-mono text-[12px] font-bold tracking-[0.18em] uppercase mb-4 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C8F04A]" />
               HOW I WORK
             </p>

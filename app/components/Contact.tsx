@@ -38,7 +38,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 lg:py-[120px] bg-[#17372D] text-[#F5F3ED]">
       <div className="max-w-[1180px] mx-auto px-7">
-        <p className="text-[#C8F04A] font-mono text-[11px] font-bold tracking-[0.18em] uppercase mb-4 flex items-center gap-2">
+        <p className="text-[#C8F04A] font-mono text-[12px] font-bold tracking-[0.18em] uppercase mb-4 flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-[#C8F04A]" />
           LET&apos;S WORK TOGETHER
         </p>
