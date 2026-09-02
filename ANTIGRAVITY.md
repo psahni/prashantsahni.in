@@ -9,19 +9,19 @@ It is a modern, single-page application (SPA) built using Next.js 16 (App Router
 ## Tech Stack & Architecture
 
 - **Framework**: [Next.js 16](file:///e:/Prashant/development/2026/prashantsahni.in/package.json) (App Router, Turbopack, React 19)
-- **Active Theme**: **Jupiter Theme** (Editorial, high-contrast, AI-accelerated product engineering design system)
+- **Active Theme**: **Theme Ivory** (Ultra-premium, editorial, AI-accelerated product engineering design system)
 - **Styling**: [Tailwind CSS v4](file:///e:/Prashant/development/2026/prashantsahni.in/app/globals.css) (`@tailwindcss/postcss`) with custom CSS variables
-- **Typography (Jupiter Theme)**:
+- **Typography (Theme Ivory)**:
   - **Display / Headings**: `Space Grotesk` (`next/font/google`)
-  - **Body Text**: `Inter` (`next/font/google`)
-  - **Monospace Eyebrow**: `JetBrains Mono` (`next/font/google`)
-- **Color Palette (Jupiter Theme)**:
-  - Light Stone Background: `#fafaf9`
-  - Dark Ink Foreground: `#111111`
-  - Indigo Accent: `#4f46e5`
-  - Muted Slate Text: `#656565`
-  - Border Lines: `#dededb`
-  - Dark Mode Sprint Section: `#111111` background with `#818cf8` indigo accent
+  - **Body Text**: `Geist` (`next/font/google`)
+  - **Monospace**: `Geist Mono` (`next/font/google`)
+- **Color System (Theme Ivory)**:
+  - **Warm Ivory Background**: `#F5F3ED` (70–80% dominant page background)
+  - **Warm Surface**: `#FFFDF8` (Card & container surfaces)
+  - **Deep Forest Primary**: `#17372D` (15–25% headlines, dark sections, primary buttons, footer)
+  - **Signal Lime Accent**: `#C8F04A` (5–10% carefully placed energy signal for step numbers, active tags, hover states, arrows)
+  - **Muted Text**: `#66706A` (Descriptions, supporting copy, metadata)
+  - **Warm Gray Borders**: `#D9D8D0` (1px subtle section and card borders)
 - **Language**: TypeScript (`tsconfig.json` with strict configuration)
 - **Email Service**: Resend API integration via serverless Route Handler ([`app/api/contact/route.ts`](file:///e:/Prashant/development/2026/prashantsahni.in/app/api/contact/route.ts))
 - **Deployment**: Vercel Serverless
