@@ -47,17 +47,27 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Column — Product Loop Graphic */}
-        <div className="flex justify-center">
-          <div className="product-loop-container w-full max-w-[440px] rounded-lg shadow-sm border border-[#D9D8D0]">
-            <div className="product-loop-circle">
-              <span className="text-center font-bold text-[#17372D] text-lg leading-tight">
-                BUILD FIRST.<br />
-                <span className="text-[#17372D] flex items-center justify-center gap-1">
-                  LEARN FASTER.
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C8F04A] inline-block" />
-                </span>
-              </span>
+        {/* Right Column — Profile Photo + Tagline */}
+        <div className="flex justify-center lg:justify-end">
+          <div className="w-full max-w-[380px] flex flex-col">
+            {/* Photo Container */}
+            <div className="overflow-hidden rounded-lg border border-[#D9D8D0] shadow-sm bg-white">
+              <img
+                src="/headshot.JPG"
+                alt="Prashant K. Sahni — Engineering & Product Consultant"
+                className="w-full mix-blend-multiply"
+                loading="eager"
+              />
+            </div>
+
+            {/* Editorial Tagline Card */}
+            <div className="mt-4 border-l-[3px] border-[#C8F04A] pl-5 py-3">
+              <p className="text-[#17372D] text-[15px] font-medium leading-relaxed italic">
+                &ldquo;Ship early. Learn fast. Build what matters.&rdquo;
+              </p>
+              <p className="text-[#66706A] text-xs font-mono tracking-wide mt-1.5 uppercase">
+                Prashant K. Sahni
+              </p>
             </div>
           </div>
         </div>
